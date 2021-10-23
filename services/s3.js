@@ -16,7 +16,7 @@ async function uploadFile(file) {
     Body: fileStream,
     Key: file.filename,
     acl: "public-read",
-		ContentType: "image"
+		ContentType: "image/*"
   };
 //   console.log(uploadParams);
   return await s3.upload(uploadParams).promise();
